@@ -4,7 +4,7 @@ A nodeJs application in which you can add new items in your to do list and delet
 <br/> To add a new todolist make get request on /<title for your to do list>
 
 <br/>
-https://github.com/dk808080/ToDoList/blob/master/Screenshot.png
+![alt tag](https://github.com/dk808080/ToDoList/blob/master/Screenshot.png)
 <br/>
 ## Available Scripts
 
