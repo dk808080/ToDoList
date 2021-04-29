@@ -10,17 +10,25 @@ h1 {
   padding: 10px;
 }
 
-.box {
+.box1 {
   max-width: 400px;
   margin: 50px auto;
   background: white;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px -5px rgba(117, 115, 115, 0.3);
+}
+.box2 {
+  max-width: 400px;
+  margin: 0px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(117, 115, 115, 0.3);
 }
 
 #heading {
   background-color: #A683E3;
   text-align: center;
+  width: 400px;
 }
 
 .item {
@@ -93,4 +101,19 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  margin-top: 50px;
+}
+
+.myphotos
+{
+  border-radius: 100%;
+  width: 100px;
+  margin: 2rem;
+
+}
+
+.mysec
+{
+  display: flex;
+  justify-content: space-around;
 }

@@ -4,13 +4,16 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
 
+//create nodejs app
 const app = express();
 
 app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
-mongoose.connect("mongodb+srv://admin-dimpal:abhinav@dimpal@todolist.bcoon.mongodb.net/todolistDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect("mongodb+srv://himanshu:himanshu@cluster0.axk6d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.set('useFindAndModify', false);
 
@@ -37,9 +40,6 @@ const listSchema = {
 };
 
 const List = mongoose.model("list",listSchema);
-
-
-
 
 app.get("/", function (req, res) {
     Item.find({}, function (err, results) {
@@ -117,7 +117,6 @@ app.post("/delete",function(req,res)
   
 });
 
-
 app.get("/:customlistname",function(req,res){
     const customListName = _.capitalize(req.params.customlistname);
     List.findOne({name:customListName},function(err,results)
@@ -146,10 +145,7 @@ app.get("/:customlistname",function(req,res){
    
 });
 
-app.get("/about", function (req, res) {
-    res.render("about");
-})
-const port = process.env.PORT||3000;
-app.listen(port, function () {
+const port = 3000;
+app.listen(port, function() {
     console.log("server started on port 3000");
 });
